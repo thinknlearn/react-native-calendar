@@ -47,6 +47,7 @@ class App extends Component {
           events={[{date: '2016-07-04', hasEventCircle: {backgroundColor: 'powderblue'}}]}
           scrollEnabled
           showControls
+          touchDayDisabled
           dayHeadings={customDayHeadings}
           monthNames={customMonthNames}
           titleFormat={'MMMM YYYY'}

@@ -54,6 +54,7 @@ export default class Calendar extends Component {
     scrollEnabled: PropTypes.bool,
     selectedDate: PropTypes.any,
     showControls: PropTypes.bool,
+    touchDayDisabled: PropTypes.bool,
     showEventIndicators: PropTypes.bool,
     startDate: PropTypes.any,
     titleFormat: PropTypes.string,
@@ -74,6 +75,7 @@ export default class Calendar extends Component {
     removeClippedSubviews: true,
     scrollEnabled: false,
     showControls: false,
+    touchDayDisabled: false,
     showEventIndicators: false,
     startDate: moment().format('YYYY-MM-DD'),
     titleFormat: 'MMMM YYYY',
@@ -253,6 +255,7 @@ export default class Calendar extends Component {
             event={eventsMap[thisMoment.format('YYYY-MM-DD')] ||
                    eventsMap[thisMoment.format('YYYYMMDD')]}
             showEventIndicators={this.props.showEventIndicators}
+            touchDisabled={this.props.touchDayDisabled}
             customStyle={this.props.customStyle}
             />
         ));
